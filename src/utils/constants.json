@@ -1,7 +1,31 @@
 {
   "letters": [
-    " ",
-    "A",
-    "H"
-  ]
+    {
+      "name": "A",
+      "border": "https://cdn.discordapp.com/attachments/877180936146534470/877180995135238154/A.png",
+      "fill": [
+        "https://cdn.discordapp.com/attachments/877180936146534470/877181326342639636/1.png",
+        "https://cdn.discordapp.com/attachments/877180936146534470/877181327311511572/2.png",
+        "https://cdn.discordapp.com/attachments/877180936146534470/877181329173807144/3.png"
+      ]
+    },
+    {
+      "name": "H",
+      "border": "https://cdn.discordapp.com/attachments/877180936146534470/877181862810898452/H.png",
+      "fill": [
+        "https://cdn.discordapp.com/attachments/877180936146534470/877182083406106634/1.png",
+        "https://cdn.discordapp.com/attachments/877180936146534470/877182084475674645/2.png",
+        "https://cdn.discordapp.com/attachments/877180936146534470/877182085515857990/3.png"
+      ]
+    }
+  ],
+  "base": "https://cdn.discordapp.com/attachments/877180936146534470/877183699047837736/base.png",
+  "waves": {
+    "level1": [
+      "https://cdn.discordapp.com/attachments/877180936146534470/877183999871680552/1.png"
+    ],
+    "level2": [
+      "https://cdn.discordapp.com/attachments/877180936146534470/877184003382333520/2.png"
+    ]
+  }
 }

@@ -23,5 +23,8 @@
   "homepage": "https://github.com/Theo-Sempaii/T-CloudyLogoMaker#readme",
   "dependencies": {
     "canvas": "^2.8.0"
+  },
+  "devDependencies": {
+    "discord.js": "^13.1.0"
   }
 }
