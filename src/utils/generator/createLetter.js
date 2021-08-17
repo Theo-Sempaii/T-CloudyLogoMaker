@@ -1,6 +1,10 @@
 const path = require('path');
 const { createCanvas, loadImage } = require('canvas')
 
+/**
+ * 
+ * @description This function is in charge of unifying the parts of the generated images of a letter
+ */
 async function createLetter() {
   const canvas = createCanvas(2048, 2048)
   const ctx = canvas.getContext("2d");

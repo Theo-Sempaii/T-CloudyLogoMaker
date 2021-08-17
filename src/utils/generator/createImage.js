@@ -6,6 +6,8 @@ const constants = require('../constants.json')
 const createBackground = require('./createBackground')
 const fs = require('fs')
 const path = require('path')
+const renderImage = require('./renderImage')
+const fill = require('./fill')
 
 /**
  * @param {String} text The text you want to make logo!
@@ -48,52 +50,6 @@ async function createImage(text, textColors, backgroundColors, backgroundStyle) 
 }
 
 
-/**
- * 
- * @param {String} color 
- * @param {String} letter 
- * @param {Number} p 
- */
-async function fill(color, letter, p) {
-
-  const canvas = createCanvas(2048, 2048)
-  const ctx = canvas.getContext("2d");
-  const l = constants.letters.find(e => e.name == letter.toUpperCase())
-  const border = await loadImage(l.border)
-  const fill = await loadImage(l.fill[p])
-  ctx.drawImage(fill, 0, 0)
-  ctx.globalCompositeOperation = "source-in";
-  ctx.fillStyle = color;
-  ctx.fillRect(0, 0, 2048, 2048);
-  ctx.globalCompositeOperation = "source-over";
-  ctx.drawImage(border, 0, 0)
-  const buffer = canvas.toBuffer()
-  return buffer
-}
-
-/**
- * 
- * @param {Buffer} buffer 
- * @param {String} letter
- * @param {Number} num
- * @param {String} path
- * @param {String} type
- * @param {String} p
- */
-
-async function renderImage(buffer, num, p, type, pa = `./out`) {
-  if (!fs.readdirSync(path.resolve(`${pa}`)).includes(num + "")) {
-    fs.mkdirSync(path.resolve(`${pa}/${num}/`))
-  }
-
-  if (type == "bg") {
-    writeFileSync(path.resolve(`${pa}/${type}${p}.png`), buffer)
-  } else {
-    writeFileSync(path.resolve(`${pa}/${num}/${type}${p}.png`), buffer)
-  }
-
-  return true
-}
 
 
 

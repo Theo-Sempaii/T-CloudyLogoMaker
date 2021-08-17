@@ -1,7 +1,7 @@
 const constants = require('../constants.json')
 /**
- * 
- * @param {String} text 
+ * @description A small tool to obtain the valid letters to make a logo!
+ * @param {String} text The text from which you want to get the valid letters!
  */
 async function getValidLetters(text) {
   const letters = await Promise.all(text.split("").map(l => {

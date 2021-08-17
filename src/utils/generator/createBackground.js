@@ -4,9 +4,10 @@ const constants = require('../constants.json')
 
 /**
  * 
- * @param {String} color 
- * @param {Number} p
- * @param {Number} level
+* @description The function in charge of creating the backgrounds for each logo!
+ * @param {String} color The color of the Background!
+ * @param {Number} p The background layer to generate!
+ * @param {Number} level The random generator of the level path!
  */
 async function createBackground(color, p, level) {
   const canvas = createCanvas(2048, 2048)
