@@ -1,5 +1,5 @@
 const path = require('path')
-const { readdirSync, mkdirSync } = require('fs')
+const { readdirSync, mkdirSync, writeFileSync } = require('fs')
 
 /**
  * @description Render the image in any indicated path!

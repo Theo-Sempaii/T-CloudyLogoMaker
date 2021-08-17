@@ -1,3 +1,6 @@
+const {createCanvas, loadImage} = require('canvas')
+const constants = require('../constants.json')
+
 /**
  * @description Create a letter layer with the colors and style indicated!
  * @param {String} color 
