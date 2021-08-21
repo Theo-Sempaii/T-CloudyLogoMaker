@@ -44,7 +44,7 @@ async function createImage(text, textColors, backgroundColors, backgroundStyle) 
 
   }))
 
-  buffer = await createLetter()
+  buffer = await createLetter(letters)
 
   return buffer
 }
